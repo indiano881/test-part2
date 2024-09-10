@@ -11,6 +11,7 @@ describe('UserName component render correctly', () => {
     expect(button).toBeInTheDocument();
   });
   test('User input is saved in state', () => {
+    //make sense here this test?
     render(<UserName updateUser={() => {}} />);
 
     const mockData = 'Rob';
