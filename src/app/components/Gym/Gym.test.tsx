@@ -8,6 +8,7 @@ describe('The componet renders correctly', () => {
     expect(cardioTitle).toHaveTextContent('Gain muscle');
   });
   test('to have button',()=>{
+    //button fiunctionality???
     render(<Gym updateFunction={()=>{}}/>);
    const button = screen.getByRole("button")
    expect(button).toBeInTheDocument()
