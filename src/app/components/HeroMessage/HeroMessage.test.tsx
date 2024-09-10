@@ -8,6 +8,7 @@ describe('display message render correctly', () => {
     expect(messageTitle).toBeInTheDocument()
   });
   it("display message paragraph render correctly", ()=> {
+    //a little bit unclear where th p should be placed!
     render(<HeroMessage name={mockName} />);
     const messageParagraph = screen.getByRole("paragraph")
     expect(messageParagraph).toBeInTheDocument();
