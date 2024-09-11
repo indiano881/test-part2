@@ -13,7 +13,7 @@ import DisplayCard from "../DisplayCard";
 //state that saves the name?
 const Home = () => {
 const [savedName,setSavedName]=useState<string>("")
-const [showPage, setShowPage] = useState<string>("")
+const [category, setCategory] = useState<string>("")
 
     return (
         <div>
@@ -21,18 +21,18 @@ const [showPage, setShowPage] = useState<string>("")
             {savedName==="" &&
                 <UserName updateUser={setSavedName} />
             }
-            {savedName!=="" && 
+            {(savedName!=="" && category!=="back") && 
                 <>
                     <HeroMessage name={savedName} />
-                    <Cardio updateFunction={undefined} /> 
+                    <Cardio updateFunction={setCategory} /> 
                     <Gym updateFunction={undefined}/>
                     <DailyChallenge updateFunction={undefined}/>
                     <Stretching updateFunction={undefined}/>
                 </> 
             }
-            {showPage==="exercise" && 
+            {(savedName!=="" && category==="back") && 
                 <>
-                    <DisplayCard onClick={undefined} workout={undefined} type={""} />
+                    <DisplayCard onClick={setCategory} workout={undefined} type={category} />
                 </> 
             }
             
