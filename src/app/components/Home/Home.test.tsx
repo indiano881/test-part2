@@ -47,7 +47,7 @@ describe('Check the functionality works correct', () => {
       target: { value: mockName },
     });
     fireEvent.click(screen.getByTestId('add-userName'));
-
+//challenging because not present in unit test
     const buttons = screen.getByTestId('getWorkout-Cardio');
     expect(buttons).toBeInTheDocument();
 
@@ -58,7 +58,7 @@ describe('Check the functionality works correct', () => {
     expect(closeButton.length).toBe(1);
 
     fireEvent.click(closeButton[0]);
-
+    //challenging because not present in unit test
     expect(screen.getByTestId('cardio-card')).toBeInTheDocument();
     expect(screen.getByTestId('gym-card')).toBeInTheDocument();
     expect(screen.getByTestId('challenge-card')).toBeInTheDocument();

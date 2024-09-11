@@ -4,9 +4,9 @@ type DailyChallengeProps = {
 
 const DailyChallenge = ({updateFunction}:DailyChallengeProps) => {
     return (
-        <div className="challenge-card">
+        <div data-testid="challenge-card">
           <h2>Challenge</h2>
-          <button>BUTTON</button>
+          <button data-testid="getWorkout-Challenge">BUTTON</button>
         </div>
     )
 };

@@ -13,7 +13,7 @@ const DisplayCard = ({onClick, workout, type}:DisplayCardprops) => {
           <p>3 x 800m</p>
           <h3>Sprint Intervals</h3>
           <p>10 x 100m</p>
-          <button>BACK</button>
+          <button data-testid="closeBtn">BACK</button>
         </div>
     )
 };

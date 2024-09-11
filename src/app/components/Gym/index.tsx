@@ -5,9 +5,9 @@ type GymProps = {
 
 const Gym = ({updateFunction}:GymProps) => {
     return (
-        <div className="gym-card">
+        <div data-testid="gym-card">
             <h2>Gain muscle</h2>
-            <button>BUTTON</button>
+            <button data-testid="getWorkout-gym">BUTTON</button>
           
         </div>
     )
