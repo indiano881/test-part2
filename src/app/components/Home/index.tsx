@@ -9,36 +9,32 @@ import Cardio from "../Cardio";
 import Gym from "../Gym";
 import DisplayCard from "../DisplayCard";
 
-//must understand components they go inside 
-//state that saves the name?
 const Home = () => {
-const [savedName,setSavedName]=useState<string>("")
-const [category, setCategory] = useState<string>("")
+  const [savedName, setSavedName] = useState<string>("");
+  const [category, setCategory] = useState<string>("");
 
-    return (
-        <div>
-            
-            {savedName==="" &&
-                <UserName updateUser={setSavedName} />
-            }
-            {(savedName!=="" && category!=="back") && 
-                <>
-                    <HeroMessage name={savedName} />
-                    <Cardio updateFunction={setCategory} /> 
-                    <Gym updateFunction={undefined}/>
-                    <DailyChallenge updateFunction={undefined}/>
-                    <Stretching updateFunction={undefined}/>
-                </> 
-            }
-            {(savedName!=="" && category==="back") && 
-                <>
-                    <DisplayCard onClick={setCategory} workout={undefined} type={category} />
-                </> 
-            }
-            
-          
-        </div>
-    )
+  return (
+    <div>
+      {/* Show UserName component if no name is saved */}
+      {savedName === "" && <UserName updateUser={setSavedName} />}
+
+      {/* Show HeroMessage and workout options when a name is saved */}
+      {savedName !== "" && category !== "back" && (
+        <>
+          <HeroMessage name={savedName} />
+          <Cardio updateFunction={setCategory} />
+          <Gym updateFunction={setCategory} />
+          <DailyChallenge updateFunction={setCategory} />
+          <Stretching updateFunction={setCategory} />
+        </>
+      )}
+
+      {/* Show DisplayCard when the category is set to 'back' */}
+      {savedName !== "" && category === "back" && (
+        <DisplayCard onClick={() => setCategory("")} workout={undefined} type={category} />
+      )}
+    </div>
+  );
 };
 
-export default Home
+export default Home;
