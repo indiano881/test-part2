@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Home from './page';
+import Home from '.';
 
 describe('Check the functionality works correct', () => {
   it('checks if UserName component renders and works correctly', () => {

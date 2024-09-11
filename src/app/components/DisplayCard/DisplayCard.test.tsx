@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import DisplayCard from '.';
 import { CardioExercise } from '@/utils/types';
-
+//this type is a little bit confusing
 const cardioWorkout: CardioExercise[] = [
   { Run: '3 x 800m' },
   { 'Sprint Intervals': '10 x 100m' },
 ];
-
+//this test is very chaotic
 describe('DisplayCard Component', () => {
   it('renders Cardio workout correctly', () => {
     render(<DisplayCard onClick={()=>{}} workout={cardioWorkout} type="Cardio" />);
