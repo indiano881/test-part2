@@ -33,6 +33,7 @@ describe('Check the functionality works correct', () => {
     const cardioTitle = screen.getAllByRole('heading', { level: 2 });
 
     expect(cardioTitle.length).toBe(4);
+    //challenging because not present in unit test
     expect(screen.getByTestId('cardio-card')).toBeInTheDocument();
     expect(screen.getByTestId('gym-card')).toBeInTheDocument();
     expect(screen.getByTestId('challenge-card')).toBeInTheDocument();

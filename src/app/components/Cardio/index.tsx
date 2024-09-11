@@ -5,7 +5,7 @@ type CardioProps = {
 
 const Cardio = ({updateFunction}:CardioProps) => {
     return (
-        <div>
+        <div className="cardio-card">
           <h2>Cardio</h2>
           <button>BUTTON</button>
         </div>

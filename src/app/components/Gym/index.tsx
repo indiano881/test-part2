@@ -5,7 +5,7 @@ type GymProps = {
 
 const Gym = ({updateFunction}:GymProps) => {
     return (
-        <div>
+        <div className="gym-card">
             <h2>Gain muscle</h2>
             <button>BUTTON</button>
           
