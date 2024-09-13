@@ -5,7 +5,7 @@ type GymProps = {
 
 const Gym = ({updateFunction}:GymProps) => {
     const handleClick = ()=> {
-        updateFunction("Gym")
+        updateFunction("back")
     }
 
     return (

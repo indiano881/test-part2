@@ -8,6 +8,7 @@ import Gym from "./components/Gym";
 import DailyChallenge from "./components/DailyChallenge";
 import Stretching from "./components/Stretching";
 import DisplayCard from "./components/DisplayCard";
+import Header from "./components/Header";
 
 
 
@@ -16,13 +17,14 @@ const Home = () => {
   const [category, setCategory] = useState<string>("");
 
   return (
-    <div>
+    <>
+      <Header />
 
       {/* Show UserName component if no name is saved */}
       {savedName === "" && <UserName updateUser={setSavedName} />}
 
       {/* Show HeroMessage and workout options when a name is saved */}
-      {savedName !== "" && category !== "back" && (
+      {(savedName !== "" && category !== "back") && (
         <>
           <HeroMessage name={savedName} />
           <Cardio updateFunction={setCategory} />
@@ -33,10 +35,10 @@ const Home = () => {
       )}
 
       {/* Show DisplayCard when the category is set to 'back' */}
-      {savedName !== "" && category === "back" && (
+      {(savedName !== "" && category === "back") && (
         <DisplayCard onClick={() => setCategory("")} workout={"undefined"} type={category} />
       )}
-    </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ type DisplayCardprops= {
 
 const DisplayCard = ({onClick, workout, type}:DisplayCardprops) => {
     const handleClick= ()=> {
-        onClick("back")
+        onClick("")
     }
     return (
         <div>

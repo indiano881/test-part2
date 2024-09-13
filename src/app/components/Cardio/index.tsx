@@ -5,7 +5,7 @@ type CardioProps = {
 
 const Cardio = ({updateFunction}:CardioProps) => {
     const handleClick = ()=> {
-        updateFunction("Cardio")
+        updateFunction("back")
     }
     return (
         <div data-testid="cardio-card">
