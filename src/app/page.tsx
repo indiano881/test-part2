@@ -27,10 +27,12 @@ const Home = () => {
       {(savedName !== "" && category !== "back") && (
         <>
           <HeroMessage name={savedName} />
+          <div className="flex flex-col sm:flex-row bg-orange-400 items-center sm:justify-center">
           <Cardio updateFunction={setCategory} />
           <Gym updateFunction={setCategory} />
           <DailyChallenge updateFunction={setCategory} />
           <Stretching updateFunction={setCategory} />
+          </div>
         </>
       )}
 

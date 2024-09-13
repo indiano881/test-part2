@@ -4,11 +4,11 @@ type HeroMessageProps = {
 
 const HeroMessage = ({name}:HeroMessageProps) => {
     return (
-        <div>
-            <p>
-                <h3>Hi {name}👋🏼 Find Your Perfect Workout!</h3>
+        
+            <p className="flex justify-center ">
+                <h3 className="text-2xl m-4">Hi {name}👋🏼 Find Your Perfect Workout!</h3>
             </p>
-        </div>
+       
     )
 };
 
