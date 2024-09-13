@@ -12,7 +12,8 @@ const DisplayCard = ({onClick, workout, type}:DisplayCardprops) => {
     }
     return (
         <div>
-            <h2>{type}</h2>
+            <h2>{type} {workout}</h2>
+
           <h3>Run</h3>
           <p>3 x 800m</p>
           <h3>Sprint Intervals</h3>

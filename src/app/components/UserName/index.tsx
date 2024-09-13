@@ -15,8 +15,8 @@ const UserName = ({ updateUser }: UserNameProps) => {
   };
 
  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); 
+  const handleSubmit = (event: { preventDefault: () => void; }) => {
+    event.preventDefault(); 
     updateUser(name);    
   };
 

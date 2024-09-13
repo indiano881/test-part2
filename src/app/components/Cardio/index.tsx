@@ -10,7 +10,7 @@ const Cardio = ({updateFunction}:CardioProps) => {
     return (
         <div data-testid="cardio-card">
           <h2 data-testid="Cardio">Cardio</h2>
-          <button data-testid="getWorkout-Cardio">BUTTON</button>
+          <button data-testid="getWorkout-Cardio" onClick={handleClick}>BUTTON</button>
         </div>
     )
 };
