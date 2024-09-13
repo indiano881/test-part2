@@ -21,7 +21,7 @@ const UserName = ({ updateUser }: UserNameProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="bg-[#ffb703] flex flex-col items-center">
       <label htmlFor="name-input">Enter your name below</label>
       <input
         id="name-input"
@@ -29,7 +29,7 @@ const UserName = ({ updateUser }: UserNameProps) => {
         onChange={handleInput}
         aria-label="Enter your name below"
       />
-      <button type="submit" data-testid="add-userName">Save</button>
+      <button type="submit" data-testid="add-userName" className="p-4 m-2 border-solid border-2 border-indigo-60 bg-[#f15bb5] w-[100px]">Save</button>
     </form>
   );
 };
