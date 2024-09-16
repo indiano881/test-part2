@@ -1,10 +1,12 @@
 type DailyChallengeProps = {
-    updateFunction:any
+    updateFunction:any,
+    setWorkoutType: any
 }
 
-const DailyChallenge = ({updateFunction}:DailyChallengeProps) => {
+const DailyChallenge = ({updateFunction, setWorkoutType}:DailyChallengeProps) => {
     const handleClick = ()=> {
-        updateFunction("Challenge")
+        updateFunction("back")
+        setWorkoutType("challenge")
     }
 
     return (

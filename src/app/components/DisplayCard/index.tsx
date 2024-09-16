@@ -1,26 +1,25 @@
-type DisplayCardprops= {
-    onClick: any,
-    workout: any,
-    type: string
-}
 
 
-
-const DisplayCard = ({onClick, workout, type}:DisplayCardprops) => {
-    const handleClick= ()=> {
-        onClick("")
-    }
+interface DisplayCardProps {
+    workout: { [key: string]: string }; 
+    type: string;
+    onClick: () => void;
+  }
+  
+  const DisplayCard: React.FC<DisplayCardProps> = ({ workout, type, onClick }) => {
+    
+    const [exerciseName, exerciseDetails] = Object.entries(workout)[0];
+  
     return (
-        <div>
-            <h2>{type} {workout}</h2>
-
-          <h3>Run</h3>
-          <p>3 x 800m</p>
-          <h3>Sprint Intervals</h3>
-          <p>10 x 100m</p>
-          <button data-testid="closeBtn" onClick={handleClick} className="p-4 m-2 border-solid border-2 border-indigo-60 bg-[#f15bb5] w-[100px] font-bold hover:bg-violet-600 hover:text-white">BACK</button>
-        </div>
-    )
-};
-
-export default DisplayCard
+      <div className="card">
+        <h2>{type.toUpperCase()} Workout</h2>
+        <p>
+          <strong>{exerciseName}:</strong> {exerciseDetails}
+        </p>
+        <button onClick={onClick}>Go Back</button>
+      </div>
+    );
+  };
+  
+  export default DisplayCard;
+  

@@ -1,10 +1,12 @@
 type StretchingProps = {
-    updateFunction: any
+    updateFunction: any,
+    setWorkoutType: any
 }
 
-const Stretching = ({updateFunction}:StretchingProps) => {
+const Stretching = ({updateFunction,setWorkoutType}:StretchingProps) => {
     const handleClick = ()=> {
-        updateFunction("Stretching")
+        updateFunction("back")
+        setWorkoutType("challenge")
     }
     return (
         <div data-testid="stretching-card">

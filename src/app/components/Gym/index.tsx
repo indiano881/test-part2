@@ -1,11 +1,13 @@
 type GymProps = {
     updateFunction:any 
+    setWorkoutType: any
     //must fix later
 }
 
-const Gym = ({updateFunction}:GymProps) => {
+const Gym = ({updateFunction, setWorkoutType}:GymProps) => {
     const handleClick = ()=> {
         updateFunction("back")
+        setWorkoutType("gym")
     }
 
     return (

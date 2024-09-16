@@ -1,11 +1,13 @@
 
 type CardioProps = {
-    updateFunction:any
+    updateFunction:any,
+    setWorkoutType: any
 }
 
-const Cardio = ({updateFunction}:CardioProps) => {
+const Cardio = ({updateFunction, setWorkoutType}:CardioProps) => {
     const handleClick = ()=> {
         updateFunction("back")
+        setWorkoutType("cardio")
     }
     return (
         <div data-testid="cardio-card">
