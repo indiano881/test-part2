@@ -12,7 +12,7 @@ interface DisplayCardProps {
   
     return (
       <div className="bg-pink-500 m-4 p-4 border-2 flex flex-col items-center w-[300px]">
-        <h2 className="text-2xl">{type.toUpperCase()} Workout</h2>
+        <h3 className="text-2xl">{type.toUpperCase()} Workout</h3>
         <p className="text-xl">
           <strong>{exerciseName}:</strong> {exerciseDetails}
         </p>
