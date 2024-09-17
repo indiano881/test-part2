@@ -17,7 +17,7 @@ function getRandomExercise(exerciseArray: string | any[]) {
 }
 
 const Home = () => {
-  const [savedName, setSavedName] = useState<string>("a"); //rimette vuoto
+  const [savedName, setSavedName] = useState<string>(""); 
   const [category, setCategory] = useState<string>(""); 
   const [workoutType, setWorkoutType] = useState<string>(""); 
   const [selectedWorkout, setSelectedWorkout] = useState<any>(null); 
@@ -78,7 +78,9 @@ const Home = () => {
 
       
       {savedName !== "" && category === "back" && selectedWorkout && (
+        <div className="flex flex-col sm:flex-row items-center sm:justify-center">
         <DisplayCard onClick={() => setCategory("")} workout={selectedWorkout} type={workoutType} />
+        </div>
       )}
     </>
   );
