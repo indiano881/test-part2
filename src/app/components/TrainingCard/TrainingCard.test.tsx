@@ -35,3 +35,4 @@ describe('The training card renders correct', () => {
     expect(CardButton).toBeInTheDocument()
   })
 });
+//FEEDBACK: I did not need to use this components. Tests looks fine and passes easily anyway.

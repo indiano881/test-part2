@@ -14,3 +14,5 @@ describe('display message render correctly', () => {
     expect(messageParagraph).toBeInTheDocument();
   })
 });
+//FEEDBACK: try to use homogenous syntax, either it or test
+//a little bit unclear where the p should be placed, which role has and so on. 

@@ -65,3 +65,5 @@ describe('Check the functionality works correct', () => {
     expect(screen.getByTestId('stretching-card')).toBeInTheDocument();
   });
 });
+//FEEDBACK: overall all integration test are very well written.
+//many of the testId where not present as unit test so that I had to go back and add them.

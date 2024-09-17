@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import DisplayCard from '.';
-import { CardioExercise } from '@/utils/types';
+import { CardioExercise } from '../../../../utils/types';
 //this type is a little bit confusing
 const cardioWorkout: CardioExercise[] = [
   { Run: '3 x 800m' },
   { 'Sprint Intervals': '10 x 100m' },
 ];
-//this test is very chaotic
+
 describe('DisplayCard Component', () => {
   it('renders Cardio workout correctly', () => {
     render(<DisplayCard onClick={()=>{}} workout={cardioWorkout} type="Cardio" />);
@@ -30,3 +30,6 @@ describe('DisplayCard Component', () => {
     expect(screen.getByText('10 x 100m')).toBeInTheDocument();
   });
 });
+//here was controversial to understand is 1 exercise with lenght 2 to be expected
+//this type CardioExercise is confuisong since run is not wrap as a string and it was epected a single exercise
+  
