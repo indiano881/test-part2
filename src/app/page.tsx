@@ -38,6 +38,21 @@ const Home = () => {
       setSelectedWorkout(randomStretchingExercise); 
     }
   }, [workoutType]); 
+  useEffect(() => {
+    if (workoutType === "cardio") {
+      const randomCardioWorkout = getRandomExercise(CardioWorkout);
+      setSelectedWorkout(randomCardioWorkout); 
+    } else if (workoutType === "gym") {
+      const randomGymWorkout = getRandomExercise(GymWorkout);
+      setSelectedWorkout(randomGymWorkout); 
+    } else if (workoutType === "challenge") {
+      const randomChallenge = getRandomExercise(challenge);
+      setSelectedWorkout(randomChallenge); 
+    } else if (workoutType === "stretching") {
+      const randomStretchingExercise = getRandomExercise(StretchingExercises);
+      setSelectedWorkout(randomStretchingExercise); 
+    }
+  }, [category]); 
 
   return (
     <>
