@@ -17,7 +17,7 @@ function getRandomExercise(exerciseArray: string | any[]) {
 }
 
 const Home = () => {
-  const [savedName, setSavedName] = useState<string>(""); 
+  const [savedName, setSavedName] = useState<string>("a"); //rimette vuoto
   const [category, setCategory] = useState<string>(""); 
   const [workoutType, setWorkoutType] = useState<string>(""); 
   const [selectedWorkout, setSelectedWorkout] = useState<any>(null); 
