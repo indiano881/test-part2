@@ -15,7 +15,7 @@ const Cardio = ({ updateFunction, setWorkoutType }: CardioProps) => {
         <div data-testid="cardio-card" className="bg-red-800 m-4 p-4 border-2 flex flex-col items-center w-[205px]">
             <h2 data-testid="Cardio" className="font-semibold text-2xl">Cardio</h2>
            
-            <img src={Hearth.src} alt="Cardio icon" className="w-20" />
+            <img src={Hearth.src} alt="Cardio icon" className="w-20"/>
             <button 
               data-testid="getWorkout-Cardio" 
               onClick={handleClick} 
