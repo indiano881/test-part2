@@ -26,7 +26,6 @@ test('DAVIDE REFACTOR-check image', () => {
   render(<DailyChallenge updateFunction={()=>{}} setWorkoutType={()=>{}}/>);
   const imageActivity = screen.getByRole('img');
   expect(imageActivity).toBeInTheDocument();
-;
    
 });
 

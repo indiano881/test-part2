@@ -67,3 +67,35 @@ describe('Check the functionality works correct', () => {
 });
 //FEEDBACK: overall all integration test are very well written.
 //many of the testId where not present as unit test so that I had to go back and add them.
+
+//REFACTOR integration test with complete flow
+
+it('DAVIDE/REFACTOR integration test whole flow', () => {
+  render(<Home />);
+  const mockName = 'Diyako';
+  fireEvent.change(screen.getByLabelText('Enter your name below'), {
+    target: { value: mockName },
+  });
+  fireEvent.click(screen.getByTestId('add-userName'));
+  //passed
+  expect(screen.getByTestId('cardio-card')).toBeInTheDocument();
+  expect(screen.getByTestId('gym-card')).toBeInTheDocument();
+  expect(screen.getByTestId('challenge-card')).toBeInTheDocument();
+  expect(screen.getByTestId('stretching-card')).toBeInTheDocument();
+
+  const exercisesBtn= screen.getAllByText("Get workout")
+  //passed
+  expect(exercisesBtn.length).toBe(4)
+  fireEvent.click(exercisesBtn[0]);
+  const closeButton = screen.getByText('Go Back');
+  //passed
+  expect(closeButton).toBeInTheDocument();
+
+  fireEvent.click(closeButton);
+  //passed
+  expect(screen.getByTestId('cardio-card')).toBeInTheDocument();
+  expect(screen.getByTestId('gym-card')).toBeInTheDocument();
+  expect(screen.getByTestId('challenge-card')).toBeInTheDocument();
+  expect(screen.getByTestId('stretching-card')).toBeInTheDocument();
+  
+});
